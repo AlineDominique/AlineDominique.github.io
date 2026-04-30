@@ -347,10 +347,6 @@ h2 {
 }
 .skill-card:hover { background: var(--bg3); }
 
-.skill-card:last-child {
-  grid-column: 3 / -1;
-}
-
 .skill-card-title {
   font-family: var(--mono);
   font-size: 11px;
