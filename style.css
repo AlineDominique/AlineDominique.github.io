@@ -34,7 +34,7 @@
   --border2:   #b8b8a8;
   --accent:    #1a1a00;
   --accent-fg: #e8ff47;
-  --accent2:   #cc4a18;
+  --accent2:   #8a7a00;
   --text:      #111110;
   --text2:     #3a3a30;
   --text3:     #777760;
@@ -167,8 +167,8 @@ h1 span {
 }
 
 [data-theme="light"] h1 span {
-  -webkit-text-stroke: 2px var(--text);
-  color: transparent;
+  -webkit-text-stroke: 0px;
+  color: var(--accent2);
 }
 
 .hero-sub {
@@ -319,6 +319,14 @@ h2 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+.fact-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+.fact-link:hover { opacity: 0.75; }
+[data-theme="light"] .fact-link { color: var(--accent2); }
 
 /* ── SKILLS ──────────────────────────────────────────────────────────────── */
 .skills-grid {
