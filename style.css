@@ -10,13 +10,13 @@
   --accent-fg: #0a0a00;
   --accent2:   #ff6b35;
   --text:      #f0f0f4;
-  --text2:     #8888a0;
-  --text3:     #4a4a60;
+  --text2:     #b0b0c8;
+  --text3:     #6a6a84;
   --white:     #ffffff;
   --card-bg:   #111114;
   --nav-bg:    rgba(9,9,11,0.94);
-  --tag-bg:    #1c1c21;
-  --tag-color: #8888a0;
+  --tag-bg:    #26262d;
+  --tag-color: #c0c0d8;
   --mono:      'IBM Plex Mono', monospace;
   --sans:      'IBM Plex Sans', sans-serif;
   --display:   'Syne', sans-serif;
@@ -36,12 +36,12 @@
   --accent-fg: #e8ff47;
   --accent2:   #cc4a18;
   --text:      #111110;
-  --text2:     #555548;
-  --text3:     #999980;
+  --text2:     #3a3a30;
+  --text3:     #777760;
   --card-bg:   #ffffff;
   --nav-bg:    rgba(245,245,240,0.94);
-  --tag-bg:    #eeeee8;
-  --tag-color: #555548;
+  --tag-bg:    #e4e4dc;
+  --tag-color: #333328;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -52,7 +52,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
-  font-size: 18px;
+  font-size: 19px;
   transition: background var(--transition), color var(--transition);
 }
 
@@ -289,7 +289,7 @@ h2 {
 
 .about-text p {
   color: var(--text2);
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.8;
   margin-bottom: 16px;
 }
@@ -351,9 +351,9 @@ h2 {
 
 .skill-tag {
   font-family: var(--mono);
-  font-size: 12px;
-  background: var(--bg3);
-  color: var(--text2);
+  font-size: 13px;
+  background: var(--tag-bg);
+  color: var(--tag-color);
   padding: 4px 10px;
   border-radius: 4px;
   border: 1px solid var(--border);
@@ -451,7 +451,7 @@ h2 {
 }
 
 .exp-bullets li {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text2);
   line-height: 1.7;
   padding-left: 16px;
