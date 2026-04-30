@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aline Dominique — Backend Software Engineer</title>
+<meta name="description" content="Portfolio de Aline Dominique, Engenheira de Software Backend especializada em Python, Django e sistemas de dados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── EXPERIENCE GROUPS ───────────────────────────────────────────────── */
+  .exp-groups { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
+
+  .exp-group-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .exp-group-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .exp-bullets li {
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.65;
+    padding-left: 14px;
+    position: relative;
+  }
+  .exp-bullets li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .exp-bullets li strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">aline.dominique</span>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about"    data-pt="Sobre"       data-en="About">Sobre</a>
+      <a href="#skills"   data-pt="Skills"      data-en="Skills">Skills</a>
+      <a href="#exp"      data-pt="Experiência" data-en="Experience">Experiência</a>
+      <a href="#projects" data-pt="Projetos"    data-en="Projects">Projetos</a>
+      <a href="#contact"  data-pt="Contato"     data-en="Contact">Contato</a>
+    </div>
+    <button class="toggle-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <button class="toggle-btn" id="themeBtn" onclick="toggleTheme()">☀</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-eyebrow" data-pt="Engenheira de Software Backend" data-en="Backend Software Engineer">Engenheira de Software Backend</div>
+  <h1 data-pt="Olá, sou<br><span>Aline Dominique</span>" data-en="Hi, I'm<br><span>Aline Dominique</span>">Olá, sou<br><span>Aline Dominique</span></h1>
+  <p class="hero-sub"
+     data-pt="Construo sistemas backend robustos com Python e Django. Especialista em processamento de dados, integrações críticas e entrega de ciclo completo."
+     data-en="I build robust backend systems with Python and Django. Specialist in data processing, critical integrations, and full-cycle delivery.">
+    Construo sistemas backend robustos com Python e Django. Especialista em processamento de dados, integrações críticas e entrega de ciclo completo.
+  </p>
+  <div class="hero-cta">
+    <a href="#contact" class="btn-primary" data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</a>
+    <a href="#projects" class="btn-ghost" data-pt="Ver projetos" data-en="See projects">Ver projetos</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">6<span>+</span></div>
+      <div class="stat-label" data-pt="anos de experiência" data-en="years of experience">anos de experiência</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8<span>+</span></div>
+      <div class="stat-label" data-pt="projetos entregues" data-en="projects delivered">projetos entregues</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5<span>+</span></div>
+      <div class="stat-label" data-pt="setores atendidos" data-en="industries served">setores atendidos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label" data-pt="plantas industriais atendidas" data-en="industrial plants served">plantas industriais atendidas</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ─────────────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="sec-header">
+    <span class="sec-tag" data-pt="Sobre mim" data-en="About me">Sobre mim</span>
+    <h2 data-pt="Quem sou eu" data-en="Who I am">Quem sou eu</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p data-pt="Engenheira de Software Backend com mais de 6 anos de experiência em Python, especializada em sistemas de alto volume de dados, integrações críticas e automação de processos."
+         data-en="Backend Software Engineer with over 6 years of experience in Python, specialized in high-volume data systems, critical integrations, and process automation.">
+        Engenheira de Software Backend com mais de 6 anos de experiência em Python, especializada em sistemas de alto volume de dados, integrações críticas e automação de processos.
+      </p>
+      <p data-pt="Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception — o que me deu visão de produto além do código."
+         data-en="Throughout my career, I acted as a bridge between clients and technical teams, served as Product Owner, and facilitated Lean Inception sessions — giving me a product perspective beyond just code.">
+        Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception — o que me deu visão de produto além do código.
+      </p>
+      <p data-pt="Atualmente explorando IA generativa, sistemas geoespaciais e dados públicos urbanos."
+         data-en="Currently exploring generative AI, geospatial systems, and urban public data.">
+        Atualmente explorando IA generativa, sistemas geoespaciais e dados públicos urbanos.
+      </p>
+    </div>
+    <div class="about-facts">
+      <div class="fact">
+        <span class="fact-icon">📍</span>
+        <div class="fact-text">
+          <strong data-pt="Localização" data-en="Location">Localização</strong>
+          <span data-pt="São José dos Campos, SP — Remoto" data-en="São José dos Campos, SP — Remote">São José dos Campos, SP — Remoto</span>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">🎓</span>
+        <div class="fact-text">
+          <strong data-pt="Formação" data-en="Education">Formação</strong>
+          <span data-pt="Análise e Desenvolvimento de Sistemas — FATEC SJC" data-en="Systems Analysis and Development — FATEC SJC">Análise e Desenvolvimento de Sistemas — FATEC SJC</span>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">🌐</span>
+        <div class="fact-text">
+          <strong data-pt="Idiomas" data-en="Languages">Idiomas</strong>
+          <span data-pt="Português (nativo) · Inglês B1 (EF SET)" data-en="Portuguese (native) · English B1 (EF SET)">Português (nativo) · Inglês B1 (EF SET)</span>
+        </div>
+      </div>
+      <div class="fact">
+        <span class="fact-icon">✦</span>
+        <div class="fact-text">
+          <strong data-pt="Certificações" data-en="Certifications">Certificações</strong>
+          <span>Databricks Fundamentals · Lean Inception Facilitator</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────────────── -->
+<section id="skills">
+  <div class="sec-header">
+    <span class="sec-tag" data-pt="Competências" data-en="Skills">Competências</span>
+    <h2 data-pt="Stack técnica" data-en="Tech stack">Stack técnica</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Backend" data-en="Backend">Backend</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Django</span>
+        <span class="skill-tag">DRF</span>
+        <span class="skill-tag">Flask</span>
+        <span class="skill-tag">HTMX</span>
+        <span class="skill-tag">Tkinter</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Banco de dados" data-en="Databases">Banco de dados</div>
+      <div class="skill-tags">
+        <span class="skill-tag">PostgreSQL</span>
+        <span class="skill-tag">PostGIS</span>
+        <span class="skill-tag">SQL Server</span>
+        <span class="skill-tag">Snowflake</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Qualidade & Testes" data-en="Quality & Tests">Qualidade & Testes</div>
+      <div class="skill-tags">
+        <span class="skill-tag">pytest</span>
+        <span class="skill-tag">model_bakery</span>
+        <span class="skill-tag">mock</span>
+        <span class="skill-tag">Coverage</span>
+        <span class="skill-tag">Sentry</span>
+        <span class="skill-tag">Flake8</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Infra & DevOps" data-en="Infra & DevOps">Infra & DevOps</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Docker</span>
+        <span class="skill-tag">GitLab CI/CD</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Linux</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Integrações" data-en="Integrations">Integrações</div>
+      <div class="skill-tags">
+        <span class="skill-tag">HubSpot API</span>
+        <span class="skill-tag">Twilio SMS</span>
+        <span class="skill-tag">Google Maps</span>
+        <span class="skill-tag">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-title" data-pt="Gestão" data-en="Management">Gestão</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Lean Inception</span>
+        <span class="skill-tag">Product Owner</span>
+        <span class="skill-tag">Kanban</span>
+        <span class="skill-tag">Jira</span>
+        <span class="skill-tag">Azure DevOps</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ─────────────────────────────────────────────────────────── -->
+<section id="exp">
+  <div class="sec-header">
+    <span class="sec-tag" data-pt="Carreira" data-en="Career">Carreira</span>
+    <h2 data-pt="Experiência profissional" data-en="Professional experience">Experiência profissional</h2>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-period">Fev 2020<br>Mai 2026<br><br>6 anos · Remoto</div>
+    <div>
+      <div class="exp-company">NECTO Systems</div>
+      <div class="exp-role" data-pt="Desenvolvedora de Sistemas Pleno" data-en="Mid-Level Software Developer">Desenvolvedora de Sistemas Pleno</div>
+
+      <div class="exp-groups">
+
+        <div class="exp-group">
+          <div class="exp-group-label" data-pt="Arquitetura & Infraestrutura" data-en="Architecture & Infrastructure">Arquitetura & Infraestrutura</div>
+          <ul class="exp-bullets">
+            <li data-pt="Inicializei projetos Django do zero, incluindo arquitetura de banco de dados, Docker, GitLab CI/CD com 3 stages (lint, test e deploy SSH) e settings por ambiente, com entrega de ciclo completo sem supervisão."
+                data-en="Bootstrapped Django projects from scratch, including database architecture, Docker, GitLab CI/CD with 3 stages (lint, test, and SSH deploy), and per-environment settings — full-cycle delivery without supervision.">
+              <strong data-pt="Inicializei projetos Django do zero," data-en="Bootstrapped Django projects from scratch,">Inicializei projetos Django do zero,</strong> incluindo arquitetura de banco de dados, Docker, GitLab CI/CD com 3 stages (lint, test e deploy SSH) e settings por ambiente, com entrega de ciclo completo sem supervisão.
+            </li>
+            <li data-pt="Apliquei padrão Facade como camada de separação entre lógica de negócio e views, com uso avançado de ORM Django (ExpressionWrapper, Case/When, annotate e prefetch_related)."
+                data-en="Applied Facade pattern as a separation layer between business logic and views, with advanced Django ORM usage (ExpressionWrapper, Case/When, annotate, and prefetch_related).">
+              <strong data-pt="Apliquei padrão Facade" data-en="Applied Facade pattern">Apliquei padrão Facade</strong> como camada de separação entre lógica de negócio e views, com uso avançado de ORM Django (ExpressionWrapper, Case/When, annotate e prefetch_related).
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-group">
+          <div class="exp-group-label" data-pt="Sistemas & Integrações" data-en="Systems & Integrations">Sistemas & Integrações</div>
+          <ul class="exp-bullets">
+            <li data-pt="Desenvolvi plataforma de dashboards e processamento de dados para o setor industrial, integrando 3 fontes de dados distintas com Flask, SQL Server e Snowflake, adotada por mais de 3 plantas."
+                data-en="Built an industrial data dashboard platform integrating 3 data sources with Flask, SQL Server, and Snowflake — adopted by 3+ plants.">
+              <strong data-pt="Desenvolvi plataforma de dashboards industriais" data-en="Built an industrial data dashboard platform">Desenvolvi plataforma de dashboards industriais</strong> integrando 3 fontes de dados com Flask, SQL Server e Snowflake, adotada por mais de 3 plantas. Incluiu pipeline de consolidação com Excel e atualização automatizada diária via schedule.
+            </li>
+            <li data-pt="Construí motor de KPIs veterinários e de fornecedores com mais de 15 métricas de negócio, usando ORM avançado e tratamento defensivo de erros em todas as funções de cálculo."
+                data-en="Built a KPI engine for veterinary and supplier domains with 15+ business metrics, using advanced ORM and defensive error handling across all calculation functions.">
+              <strong data-pt="Construí motor de KPIs" data-en="Built a KPI engine">Construí motor de KPIs</strong> veterinários e de fornecedores com mais de 15 métricas de negócio, usando ORM avançado e tratamento defensivo de erros em todas as funções de cálculo.
+            </li>
+            <li data-pt="Integrei APIs externas em múltiplos projetos: Twilio SMS para notificações de status, Google Maps API para cálculo geoespacial de distância e HubSpot REST API com autenticação por token."
+                data-en="Integrated external APIs across multiple projects: Twilio SMS for status notifications, Google Maps API for geospatial distance calculation, and HubSpot REST API with token authentication.">
+              <strong data-pt="Integrei APIs externas" data-en="Integrated external APIs">Integrei APIs externas</strong> em múltiplos projetos: Twilio SMS para notificações, Google Maps API para cálculo geoespacial de distância e HubSpot REST API com autenticação por token.
+            </li>
+            <li data-pt="Otimizei algoritmos de processamento de documentos fiscais (eSocial, ECD, ECF) reduzindo o tempo de geração de relatórios, e implementei kanban de ocorrências com atualização em tempo real via HTMX."
+                data-en="Optimized fiscal document processing algorithms (eSocial, ECD, ECF) reducing report generation time, and implemented an incident kanban board with real-time updates via HTMX.">
+              <strong data-pt="Otimizei algoritmos de processamento fiscal" data-en="Optimized fiscal document processing">Otimizei algoritmos de processamento fiscal</strong> (eSocial, ECD, ECF) reduzindo o tempo de geração de relatórios, e implementei kanban de ocorrências com atualização em tempo real via HTMX.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-group">
+          <div class="exp-group-label" data-pt="Qualidade & Testes" data-en="Quality & Tests">Qualidade & Testes</div>
+          <ul class="exp-bullets">
+            <li data-pt="Criei suítes de teste completas em múltiplos projetos usando pytest e model_bakery, cobrindo models, forms, views e facades, com isolamento correto de dependências externas via mock e casos de borda."
+                data-en="Created complete test suites across multiple projects using pytest and model_bakery, covering models, forms, views, and facades — with proper external dependency isolation via mock and edge cases.">
+              <strong data-pt="Criei suítes de teste completas" data-en="Created complete test suites">Criei suítes de teste completas</strong> em múltiplos projetos usando pytest e model_bakery, cobrindo models, forms, views e facades, com isolamento correto de dependências externas via mock e casos de borda.
+            </li>
+            <li data-pt="Utilizei Sentry ativamente para monitoramento de produção, identificando e corrigindo proativamente um N+1 detectado em produção, sem demanda externa."
+                data-en="Actively used Sentry for production monitoring, proactively identifying and fixing an N+1 query detected in production without any external demand.">
+              <strong data-pt="Utilizei Sentry ativamente" data-en="Actively used Sentry">Utilizei Sentry ativamente</strong> para monitoramento de produção, identificando e corrigindo proativamente um N+1 detectado em produção, sem demanda externa.
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-group">
+          <div class="exp-group-label" data-pt="Domínios & Gestão" data-en="Domains & Management">Domínios & Gestão</div>
+          <ul class="exp-bullets">
+            <li data-pt="Atuei em setores distintos: industrial, fiscal (eSocial, SPED, CNPJ Receita Federal), florestal (cálculos de carbono), geoespacial e veterinário."
+                data-en="Worked across distinct sectors: industrial, fiscal (eSocial, SPED, Federal Revenue CNPJ), forestry (carbon calculations), geospatial, and veterinary.">
+              Atuei em setores distintos: <strong>industrial, fiscal</strong> (eSocial, SPED, CNPJ Receita Federal), <strong>florestal</strong> (cálculos de carbono), <strong>geoespacial</strong> e <strong>veterinário</strong>.
+            </li>
+            <li data-pt="Facilitei Lean Inception e atuei como Product Owner em projetos de consultoria, fazendo a ponte entre cliente e equipe de desenvolvimento."
+                data-en="Facilitated Lean Inception sessions and served as Product Owner in consulting projects, bridging clients and development teams.">
+              <strong data-pt="Facilitei Lean Inception" data-en="Facilitated Lean Inception">Facilitei Lean Inception</strong> e atuei como Product Owner em projetos de consultoria, fazendo a ponte entre cliente e equipe de desenvolvimento.
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /exp-groups -->
+
+      <div class="exp-tags" style="margin-top: 16px;">
+        <span class="exp-tag">Python</span>
+        <span class="exp-tag">Django</span>
+        <span class="exp-tag">Flask</span>
+        <span class="exp-tag">DRF</span>
+        <span class="exp-tag">HTMX</span>
+        <span class="exp-tag">PostgreSQL</span>
+        <span class="exp-tag">PostGIS</span>
+        <span class="exp-tag">SQL Server</span>
+        <span class="exp-tag">Snowflake</span>
+        <span class="exp-tag">Docker</span>
+        <span class="exp-tag">GitLab CI/CD</span>
+        <span class="exp-tag">pytest</span>
+        <span class="exp-tag">Sentry</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-period">2018<br>2020</div>
+    <div>
+      <div class="exp-company" data-pt="Secretaria da Educação — SJC" data-en="Secretaria da Educação — SJC">Secretaria da Educação — SJC</div>
+      <div class="exp-role" data-pt="Estagiária de Suporte de TI" data-en="IT Support Intern">Estagiária de Suporte de TI</div>
+      <div class="exp-desc"
+           data-pt="Prestei suporte técnico remoto e presencial para hardware, software e dispositivos móveis. Atuei como ponto de contato entre usuários finais e equipe de TI, traduzindo necessidades técnicas e funcionais entre as áreas."
+           data-en="Provided remote and on-site technical support for hardware, software, and mobile devices. Acted as the point of contact between end users and the IT team, bridging technical and functional needs.">
+        Prestei suporte técnico remoto e presencial para hardware, software e dispositivos móveis. Atuei como ponto de contato entre usuários finais e equipe de TI, traduzindo necessidades técnicas e funcionais entre as áreas.
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── PROJECTS ────────────────────────────────────────────────────────────── -->
+<section id="projects">
+  <div class="sec-header">
+    <span class="sec-tag" data-pt="Portfólio" data-en="Portfolio">Portfólio</span>
+    <h2 data-pt="Projetos" data-en="Projects">Projetos</h2>
+  </div>
+  <div class="projects-grid">
+    <a href="https://github.com/AlineDominique/script-usando-beautifulsoup" class="project-card" target="_blank">
+      <div class="project-type" data-pt="Web Scraping · Automação" data-en="Web Scraping · Automation">Web Scraping · Automação</div>
+      <div class="project-name" data-pt="Extrator de Patentes" data-en="Patent Data Extractor">Extrator de Patentes</div>
+      <div class="project-desc"
+           data-pt="Script automatizado em Python para extração de dados estruturados a partir de arquivos HTML. Desenvolvido para processar resultados de pesquisas de patentes e consolidar informações em relatório formatado."
+           data-en="Automated Python script for structured data extraction from HTML files. Built to process patent search results and consolidate information into a formatted report.">
+        Script automatizado em Python para extração de dados estruturados a partir de arquivos HTML. Desenvolvido para processar resultados de pesquisas de patentes e consolidar informações em relatório formatado.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">BeautifulSoup</span>
+        <span class="project-tag">Web Scraping</span>
+        <span class="project-tag">Automação</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/AlineDominique/Analise-de-Despesas" class="project-card" target="_blank">
+      <div class="project-type" data-pt="Análise de dados · Dados públicos" data-en="Data analysis · Public data">Análise de dados · Dados públicos</div>
+      <div class="project-name" data-pt="Análise de Despesas — SJC" data-en="Expense Analysis — SJC">Análise de Despesas — SJC</div>
+      <div class="project-desc"
+           data-pt="Análise das despesas da Prefeitura de São José dos Campos dos últimos 18 meses com visualizações interativas."
+           data-en="Analysis of São José dos Campos city expenses over the last 18 months with interactive visualizations.">
+        Análise das despesas da Prefeitura de São José dos Campos dos últimos 18 meses com visualizações interativas.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Jupyter</span>
+        <span class="project-tag">dados públicos</span>
+      </div>
+    </a>
+
+    <a href="https://github.com/AlineDominique" class="project-card">
+      <div class="wip-badge" data-pt="em breve" data-en="coming soon">em breve</div>
+      <div class="project-type" data-pt="Dados públicos · Transparência" data-en="Public data · Transparency">Dados públicos · Transparência</div>
+      <div class="project-name">SJC Transparente</div>
+      <div class="project-desc"
+           data-pt="Portal de transparência com dados de vereadores, gastos públicos e votações da Câmara Municipal de São José dos Campos."
+           data-en="Transparency portal with data on city council members, public spending, and votes from São José dos Campos.">
+        Portal de transparência com dados de vereadores, gastos públicos e votações da Câmara Municipal de São José dos Campos.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Flask</span>
+        <span class="project-tag">PostgreSQL</span>
+        <span class="project-tag">Plotly</span>
+        <span class="project-tag">dados públicos</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ── CONTACT ────────────────────────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-box">
+    <h2 data-pt="Vamos conversar?" data-en="Let's talk?">Vamos conversar?</h2>
+    <p class="contact-sub"
+       data-pt="Estou disponível para novas oportunidades remotas. Se tiver um projeto interessante ou uma vaga que combine com meu perfil, fale comigo."
+       data-en="I'm open to new remote opportunities. If you have an interesting project or a role that fits my profile, reach out.">
+      Estou disponível para novas oportunidades remotas. Se tiver um projeto interessante ou uma vaga que combine com meu perfil, fale comigo.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:alinedomi.silva@gmail.com" class="contact-link">
+        <span>✉</span> alinedomi.silva@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/alinedominique" class="contact-link" target="_blank">
+        <span>in</span> LinkedIn
+      </a>
+      <a href="https://github.com/AlineDominique" class="contact-link" target="_blank">
+        <span>⌥</span> GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span data-pt="Feito com cuidado por Aline Dominique · 2026" data-en="Crafted with care by Aline Dominique · 2026">Feito com cuidado por Aline Dominique · 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
