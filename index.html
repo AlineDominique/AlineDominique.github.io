@@ -8,54 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* ── EXPERIENCE GROUPS ───────────────────────────────────────────────── */
-  .exp-groups { margin-top: 16px; display: flex; flex-direction: column; gap: 20px; }
-
-  .exp-group-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .exp-group-label::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  .exp-bullets {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .exp-bullets li {
-    font-size: 16px;
-    color: var(--text2);
-    line-height: 1.65;
-    padding-left: 14px;
-    position: relative;
-  }
-  .exp-bullets li::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-    font-size: 18px;
-    line-height: 1.4;
-  }
-  .exp-bullets li strong {
-    color: var(--text);
-    font-weight: 500;
-  }
-</style>
 </head>
 <body>
 <nav>
@@ -72,10 +24,7 @@
     <button class="toggle-btn" id="themeBtn" onclick="toggleTheme()">☀</button>
   </div>
 </nav>
-
 <main>
-
-<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-eyebrow" data-pt="Engenheira de Software Backend" data-en="Backend Software Engineer">Engenheira de Software Backend</div>
   <h1 data-pt="Olá, sou<br><span>Aline Dominique</span>" data-en="Hi, I'm<br><span>Aline Dominique</span>">Olá, sou<br><span>Aline Dominique</span></h1>
@@ -107,8 +56,6 @@
     </div>
   </div>
 </section>
-
-<!-- ── ABOUT ─────────────────────────────────────────────────────────────── -->
 <section id="about">
   <div class="sec-header">
     <span class="sec-tag" data-pt="Sobre mim" data-en="About me">Sobre mim</span>
@@ -120,13 +67,13 @@
          data-en="Backend Software Engineer with over 6 years of experience in Python, specialized in high-volume data systems, critical integrations, and process automation.">
         Engenheira de Software Backend com mais de 6 anos de experiência em Python, especializada em sistemas de alto volume de dados, integrações críticas e automação de processos.
       </p>
-      <p data-pt="Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception — o que me deu visão de produto além do código."
-         data-en="Throughout my career, I acted as a bridge between clients and technical teams, served as Product Owner, and facilitated Lean Inception sessions — giving me a product perspective beyond just code.">
-        Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception — o que me deu visão de produto além do código.
+      <p data-pt="Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception, o que me deu visão de produto além do código."
+         data-en="Throughout my career, I acted as a bridge between clients and technical teams, served as Product Owner, and facilitated Lean Inception sessions, giving me a product perspective beyond just code.">
+        Ao longo da carreira, atuei como elo entre cliente e equipe técnica, exerci o papel de Product Owner e fui facilitadora de Lean Inception, o que me deu visão de produto além do código.
       </p>
-      <p data-pt="Atualmente explorando IA generativa, sistemas geoespaciais e dados públicos urbanos."
-         data-en="Currently exploring generative AI, geospatial systems, and urban public data.">
-        Atualmente explorando IA generativa, sistemas geoespaciais e dados públicos urbanos.
+      <p data-pt="Atualmente explorando dados públicos e sistemas geoespaciais."
+         data-en="Currently exploring public data and geospatial systems.">
+        Atualmente explorando dados públicos e sistemas geoespaciais.
       </p>
     </div>
     <div class="about-facts">
@@ -148,21 +95,19 @@
         <span class="fact-icon">🌐</span>
         <div class="fact-text">
           <strong data-pt="Idiomas" data-en="Languages">Idiomas</strong>
-          <span>Português (nativo) · <a href="https://cert.efset.org/A48TKp" target="_blank" style="color: var(--accent); text-decoration: none;" data-pt="Inglês B1 (EF SET) ↗" data-en="English B1 (EF SET) ↗">Inglês B1 (EF SET) ↗</a></span>
+          <span>Português (nativo) · <a href="https://cert.efset.org/A48TKp" target="_blank" class="fact-link" data-pt="Inglês B1 (EF SET) ↗" data-en="English B1 (EF SET) ↗">Inglês B1 (EF SET) ↗</a></span>
         </div>
       </div>
       <div class="fact">
         <span class="fact-icon">✦</span>
         <div class="fact-text">
           <strong data-pt="Certificações" data-en="Certifications">Certificações</strong>
-          <span><a href="https://credentials.databricks.com/f2b8e174-6d4d-48cf-9b65-3c35c5d97049#acc.Zs0dmTeS" target="_blank" style="color: var(--accent); text-decoration: none;">Databricks Fundamentals ↗</a> · <a href="https://caroli.org/docs/certificado-lean-inception/?trk=public_profile_see-credential" target="_blank" style="color: var(--accent); text-decoration: none;">Lean Inception Facilitator ↗</a></span>
+          <span><a href="https://credentials.databricks.com/f2b8e174-6d4d-48cf-9b65-3c35c5d97049#acc.Zs0dmTeS" target="_blank" class="fact-link">Databricks Fundamentals ↗</a> · <a href="https://caroli.org/docs/certificado-lean-inception/?trk=public_profile_see-credential" target="_blank" class="fact-link">Lean Inception Facilitator ↗</a></span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ── SKILLS ─────────────────────────────────────────────────────────────── -->
 <section id="skills">
   <div class="sec-header">
     <span class="sec-tag" data-pt="Competências" data-en="Skills">Competências</span>
@@ -230,27 +175,22 @@
     </div>
   </div>
 </section>
-
-<!-- ── EXPERIENCE ─────────────────────────────────────────────────────────── -->
 <section id="exp">
   <div class="sec-header">
     <span class="sec-tag" data-pt="Carreira" data-en="Career">Carreira</span>
     <h2 data-pt="Experiência profissional" data-en="Professional experience">Experiência profissional</h2>
   </div>
-
   <div class="exp-item">
     <div class="exp-period">Fev 2020<br>Mai 2026<br><br>6 anos · Remoto</div>
     <div>
       <div class="exp-company">NECTO Systems</div>
       <div class="exp-role" data-pt="Desenvolvedora de Sistemas Pleno" data-en="Mid-Level Software Developer">Desenvolvedora de Sistemas Pleno</div>
-
       <div class="exp-groups">
-
         <div class="exp-group">
           <div class="exp-group-label" data-pt="Arquitetura & Infraestrutura" data-en="Architecture & Infrastructure">Arquitetura & Infraestrutura</div>
           <ul class="exp-bullets">
             <li data-pt="Inicializei projetos Django do zero, incluindo arquitetura de banco de dados, Docker, GitLab CI/CD com 3 stages (lint, test e deploy SSH) e settings por ambiente, com entrega de ciclo completo sem supervisão."
-                data-en="Bootstrapped Django projects from scratch, including database architecture, Docker, GitLab CI/CD with 3 stages (lint, test, and SSH deploy), and per-environment settings — full-cycle delivery without supervision.">
+                data-en="Bootstrapped Django projects from scratch, including database architecture, Docker, GitLab CI/CD with 3 stages (lint, test, and SSH deploy), and per-environment settings, with full-cycle delivery without supervision.">
               <strong data-pt="Inicializei projetos Django do zero," data-en="Bootstrapped Django projects from scratch,">Inicializei projetos Django do zero,</strong> incluindo arquitetura de banco de dados, Docker, GitLab CI/CD com 3 stages (lint, test e deploy SSH) e settings por ambiente, com entrega de ciclo completo sem supervisão.
             </li>
             <li data-pt="Apliquei padrão Facade como camada de separação entre lógica de negócio e views, com uso avançado de ORM Django (ExpressionWrapper, Case/When, annotate e prefetch_related)."
@@ -259,12 +199,11 @@
             </li>
           </ul>
         </div>
-
         <div class="exp-group">
           <div class="exp-group-label" data-pt="Sistemas & Integrações" data-en="Systems & Integrations">Sistemas & Integrações</div>
           <ul class="exp-bullets">
-            <li data-pt="Desenvolvi plataforma de dashboards e processamento de dados para o setor industrial, integrando 3 fontes de dados distintas com Flask, SQL Server e Snowflake, adotada por mais de 3 plantas."
-                data-en="Built an industrial data dashboard platform integrating 3 data sources with Flask, SQL Server, and Snowflake — adopted by 3+ plants.">
+            <li data-pt="Desenvolvi plataforma de dashboards e processamento de dados para o setor industrial, integrando 3 fontes de dados distintas com Flask, SQL Server e Snowflake, adotada por mais de 3 plantas. Incluiu pipeline de consolidação com Excel e atualização automatizada diária via schedule."
+                data-en="Built an industrial data dashboard platform integrating 3 data sources with Flask, SQL Server, and Snowflake, adopted by 3+ plants. Included an Excel consolidation pipeline and automated daily database updates via schedule.">
               <strong data-pt="Desenvolvi plataforma de dashboards industriais" data-en="Built an industrial data dashboard platform">Desenvolvi plataforma de dashboards industriais</strong> integrando 3 fontes de dados com Flask, SQL Server e Snowflake, adotada por mais de 3 plantas. Incluiu pipeline de consolidação com Excel e atualização automatizada diária via schedule.
             </li>
             <li data-pt="Construí motor de KPIs veterinários e de fornecedores com mais de 15 métricas de negócio, usando ORM avançado e tratamento defensivo de erros em todas as funções de cálculo."
@@ -281,12 +220,11 @@
             </li>
           </ul>
         </div>
-
         <div class="exp-group">
           <div class="exp-group-label" data-pt="Qualidade & Testes" data-en="Quality & Tests">Qualidade & Testes</div>
           <ul class="exp-bullets">
             <li data-pt="Criei suítes de teste completas em múltiplos projetos usando pytest e model_bakery, cobrindo models, forms, views e facades, com isolamento correto de dependências externas via mock e casos de borda."
-                data-en="Created complete test suites across multiple projects using pytest and model_bakery, covering models, forms, views, and facades — with proper external dependency isolation via mock and edge cases.">
+                data-en="Created complete test suites across multiple projects using pytest and model_bakery, covering models, forms, views, and facades, with proper external dependency isolation via mock and edge cases.">
               <strong data-pt="Criei suítes de teste completas" data-en="Created complete test suites">Criei suítes de teste completas</strong> em múltiplos projetos usando pytest e model_bakery, cobrindo models, forms, views e facades, com isolamento correto de dependências externas via mock e casos de borda.
             </li>
             <li data-pt="Utilizei Sentry ativamente para monitoramento de produção, identificando e corrigindo proativamente um N+1 detectado em produção, sem demanda externa."
@@ -295,7 +233,6 @@
             </li>
           </ul>
         </div>
-
         <div class="exp-group">
           <div class="exp-group-label" data-pt="Domínios & Gestão" data-en="Domains & Management">Domínios & Gestão</div>
           <ul class="exp-bullets">
@@ -309,11 +246,9 @@
             </li>
           </ul>
         </div>
-
-      </div><!-- /exp-groups -->
+      </div>
     </div>
   </div>
-
   <div class="exp-item">
     <div class="exp-period">2018<br>2020<br><br>2 anos · Presencial</div>
     <div>
@@ -326,10 +261,7 @@
       </div>
     </div>
   </div>
-
 </section>
-
-<!-- ── PROJECTS ────────────────────────────────────────────────────────────── -->
 <section id="projects">
   <div class="sec-header">
     <span class="sec-tag" data-pt="Portfólio" data-en="Portfolio">Portfólio</span>
@@ -351,7 +283,6 @@
         <span class="project-tag">Automação</span>
       </div>
     </a>
-
     <a href="https://github.com/AlineDominique/Analise-de-Despesas" class="project-card" target="_blank">
       <div class="project-type" data-pt="Análise de dados · Dados públicos" data-en="Data analysis · Public data">Análise de dados · Dados públicos</div>
       <div class="project-name" data-pt="Análise de Despesas — SJC" data-en="Expense Analysis — SJC">Análise de Despesas — SJC</div>
@@ -366,11 +297,8 @@
         <span class="project-tag">dados públicos</span>
       </div>
     </a>
-
   </div>
 </section>
-
-<!-- ── CONTACT ────────────────────────────────────────────────────────────── -->
 <section id="contact">
   <div class="contact-box">
     <h2 data-pt="Vamos conversar?" data-en="Let's talk?">Vamos conversar?</h2>
@@ -392,13 +320,10 @@
     </div>
   </div>
 </section>
-
 </main>
-
 <footer>
   <span data-pt="Feito com cuidado por Aline Dominique · 2026" data-en="Crafted with care by Aline Dominique · 2026">Feito com cuidado por Aline Dominique · 2026</span>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
